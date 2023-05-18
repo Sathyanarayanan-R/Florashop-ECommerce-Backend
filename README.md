@@ -1,5 +1,3 @@
-(https://github.com/Sathyanarayanan-R)
-
 # FLoraShop MERN APP
 
 <img src="./logo.jpg" width="260"/>
