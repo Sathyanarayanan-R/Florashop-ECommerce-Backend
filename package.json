@@ -10,6 +10,7 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server",
+    "build": "npm install",
     "data:import": "node seeder",
     "data:scrap": "node seeder -d"
   },
