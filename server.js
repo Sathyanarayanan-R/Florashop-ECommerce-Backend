@@ -5,6 +5,7 @@ import connectDB from './config/data-base.js';
 import colors from 'colors';
 import morgan from 'morgan';
 import { urlNotFound, errorHandler } from './middlewares/errorMiddlewares.js';
+import cors from 'cors';
 
 // import Routes
 import productRoutes from './routes/productRoutes.js';
@@ -14,6 +15,8 @@ import uploadRoutes from "./routes/uploadRoutes.js";
 
 // invoking express func
 const app = express();
+
+app.use(cors());
 
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))
