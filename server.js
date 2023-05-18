@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import connectDB from './config/data-base.js';
 import colors from 'colors';
 import morgan from 'morgan';
-import {urlNotFound, errorHandler} from './middlewares/errorMiddlewares.js';
+import { urlNotFound, errorHandler } from './middlewares/errorMiddlewares.js';
 
 // import Routes
 import productRoutes from './routes/productRoutes.js';
@@ -15,7 +15,7 @@ import uploadRoutes from "./routes/uploadRoutes.js";
 // invoking express func
 const app = express();
 
-if(process.env.NODE_ENV === 'development'){
+if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))
 }
 app.use(express.json())
@@ -42,17 +42,9 @@ const __dirname = path.resolve();
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
 
-if(process.env.NODE_ENV === 'production'){
-  app.use(express.static(path.join(__dirname, '/frontend/build')))
-  app.get('*',(req,res) => {
-    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
-  })
-}else{
-  app.get("/", (req, res) => {
-    res.send("API is running...");
-  });
-
-}
+app.get("/", (req, res) => {
+  res.send("API is running...");
+});
 
 
 //custom Middleware for error handling
