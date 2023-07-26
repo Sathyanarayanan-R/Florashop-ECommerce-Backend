@@ -6,16 +6,15 @@
 
 # E- Commerce website to sell and buy Products
 
-## Deployed Website
+## Deployed Website : https://florashop-ecommerce-sj.netlify.app
 
+## Github Repositories
 
+Frontend Link : https://github.com/Sathyanarayanan-R/Florashop-ECommerce-Frontend
 
-## Github Repository
-
-
+Backend Link : https://github.com/Sathyanarayanan-R/Florashop-ECommerce-Backend
 
 ![FLoraShop Banner](docs/HomePage.jpg)
-
 
 ## Tech Stack
 
